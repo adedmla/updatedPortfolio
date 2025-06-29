@@ -1,0 +1,330 @@
+/* ===========================================
+   CSS RESET & BASE STYLES
+   =========================================== */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    sans-serif;
+  color: #424242;
+  background-color: #ffffff;
+  height: 100vh;
+  overflow: hidden; /* Prevents scrolling */
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===========================================
+   LAYOUT UTILITIES
+   =========================================== */
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+/* ===========================================
+   TYPOGRAPHY
+   =========================================== */
+
+.text-hero {
+  font-size: 1.5rem; /* 24px */
+  font-weight: 700;
+}
+
+.text-subtitle {
+  font-size: 1rem;
+  color: #475569;
+}
+
+.text-body {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  max-width: 50rem;
+}
+
+/* ===========================================
+   NAVIGATION
+   =========================================== */
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 0;
+  flex-shrink: 0;
+  width: 100%;
+}
+
+.navbar__left {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.navbar__brand {
+  text-decoration: none;
+  color: #424242;
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  transition: background-color 0.2s ease;
+  user-select: none;
+}
+
+.navbar__brand:hover {
+  background-color: #f8fafc;
+}
+
+.navbar__nav {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  list-style: none;
+}
+
+.navbar__link {
+  text-decoration: none;
+  color: #424242;
+  font-weight: 400;
+  padding: 0.5rem 0;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.navbar__link:hover {
+  border-bottom-color: #424242;
+}
+
+.main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 0;
+}
+
+.hero {
+  margin-bottom: 1rem;
+  text-align: left;
+}
+
+.ascii-donut {
+  position: relative;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: flex-start;
+  margin-left: -4.5rem;
+}
+
+.ascii-donut pre {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 6px;
+  line-height: 6px;
+  color: #475569;
+  background: transparent;
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  overflow: hidden;
+}
+
+.content {
+  max-width: 50rem; /* Match text-body width */
+}
+
+/* ===========================================
+   PROJECTS SECTION
+   =========================================== */
+
+.projects-container {
+  max-width: 100%;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+}
+
+.project-card {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 0.5rem;
+  padding: 1rem;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  max-width: 280px;
+}
+
+.project-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.project-title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #424242;
+  margin: 0;
+}
+
+.project-icons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.project-icon {
+  width: 20px;
+  height: 20px;
+  color: #475569;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-icon:hover {
+  color: #424242;
+}
+
+.project-description {
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: #475569;
+  margin-bottom: 0.75rem;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.project-tag {
+  background-color: #e2e8f0;
+  color: #475569;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 0.25rem 0.75rem;
+  border-radius: 1rem;
+  border: 1px solid #cbd5e1;
+}
+
+/* ===========================================
+   FOOTER
+   =========================================== */
+
+.footer {
+  flex-shrink: 0;
+  padding: 1.5rem 0;
+  border-top: 1px solid #e2e8f0;
+}
+
+.footer__links {
+  display: flex;
+  gap: 2rem;
+  justify-content: flex-start;
+}
+
+.footer__link {
+  text-decoration: none;
+  color: #475569;
+  font-size: 0.875rem;
+  transition: color 0.2s ease;
+}
+
+.footer__link:hover {
+  color: #424242;
+}
+
+.github-btn {
+  color: grey;
+}
+
+.github-btn:visited {
+  text-decoration: none;
+}
+
+/* ===========================================
+   RESPONSIVE DESIGN
+   =========================================== */
+
+@media (max-width: 768px) {
+  body {
+    overflow: auto; /* Allow scrolling on mobile if needed */
+  }
+
+  .container {
+    padding: 0 1rem;
+  }
+
+  .navbar {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+  }
+
+  .navbar__nav {
+    gap: 1.5rem;
+  }
+
+  .text-hero {
+    font-size: 1.25rem;
+  }
+
+  .content {
+    max-width: 100%;
+  }
+
+  .ascii-donut {
+    justify-content: center;
+  }
+
+  .hero {
+    text-align: center;
+  }
+
+  .footer__links {
+    justify-content: center;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar__nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+  }
+
+  .ascii-donut pre {
+    font-size: 4px;
+    line-height: 4px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+}
